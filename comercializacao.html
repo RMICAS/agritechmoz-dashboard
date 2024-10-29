@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comercializacao</title>
+    <link rel="stylesheet" href="assets/main.css">
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+</head>
+<body>
+    <div class="sidebar">
+        
+        <div class="menu">
+            <ul>
+                <li><i class="icon"><a href="/index.html" target="_blank"><img src="/assets/images/logo.png" width="50px" alt="Logo"></a></i></li>
+                <li><i class="icon"><a href="/index.html" target="_blank"><img src="/assets/images/home.png" width="50px" alt="Home"></a></i></li>
+                <li><i class="icon"><a href="/sementeira.html" target="_blank"><img src="/assets/images/seed.png" width="50px" alt="Seed"></a></i></li>
+                <li><i class="icon"><a href="/crescimento.html" target="_blank"><img src="assets/images/growth.png" width="50px" alt="Growth"></a></i></li>
+                <li><i class="icon"><a href="/analise.html" target="_blank"><img src="assets/images/money.png" width="50px" alt="Money"></a></i></li>
+                <li><i class="icon"><a href="https://link-settings.com" target="_blank"><img src="assets/images/settings.png" width="40px" alt="Settings"></a></i></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="main-content">
+
+        <header class="header">
+            <div class="profile">
+                <img src="/assets/images/Sambo.jpg" alt="profile picture">
+                <h1>Hello, Roberto</h1>
+            </div>
+            <div class="date-filter">
+                <input type="text" value="From Jan 1, 2023 to Dec 31, 2024" />
+                <button>Repolho</button>
+            </div>
+            <div class="actions">
+                <input type="text" placeholder="Search..." />
+                <button>Filter</button>
+                <button>Download</button>
+            </div>
+        </header>
+
+        <section class="metrics">
+            <div class="metric-box">
+                <img src="/assets/images/plant.png" alt="area" width="50px">
+                <p class="title">Número total de produtos colhidos
+                </p>
+                <p class="value">12.000</p>
+            </div>
+            <div class="metric-box">
+                <img src="/assets/images/scale.png" alt="scale" width="50px">
+                <p class="title">Peso médio das plantas colhidas.</p>
+                <p class="value">24kg</p>
+            </div>
+            <div class="metric-box">
+                <img src="/assets/images/plant.png" alt="plant" width="50px">
+                <p class="title">Plantas colhidas que estão estragadas</p>
+                <p class="value">10%</p>
+            </div>
+            <div class="metric-box">
+                <img src="/assets/images/plant.png" alt="plant" width="50px">
+                <p class="title">Quantidade total de produtos vendidos</p>
+                <p class="value">11.000</p>
+            </div>
+            <div class="metric-box">
+                <p class="title">Quantidade total de quilos vendidos</p>
+                    <div id="salesChart"></div>
+            </div>
+            <div class="metric-box">
+                <img src="/assets/images/plant.png" alt="plant" width="50px">
+                <p class="title">Preço médio obtido por quilo de produto vendido</p>
+                <p class="value">50MT</p>
+            </div>
+        </section>
+
+        <section class="chart-section">
+            <h2>Receita estimada vs receita total</h2>
+            <div class="chart">
+                <div id="revenuechart"></div>
+            </div>
+        </section>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

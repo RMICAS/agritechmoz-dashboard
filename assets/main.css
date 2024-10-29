@@ -1,0 +1,143 @@
+/* Overview */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    display: flex;
+    background-color: #f7f7f7;
+}
+
+.sidebar {
+    width: 80px;
+    background-color: #fff;
+    padding: 20px;
+    border-right: 1px solid #ddd;
+    padding-top: 70px;
+}
+
+.sidebar .menu ul {
+    list-style-type: none;
+}
+
+.sidebar .menu li {
+    text-align: center;
+    margin: 15px 0;
+}
+
+.icon {
+    font-size: 24px;
+}
+
+.main-content {
+    flex-grow: 1;
+    padding: 20px;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.header .profile {
+    text-align: left;
+    display: flex;
+}
+
+.header .profile img {
+    border-radius: 30%;
+    width: 50px;
+}
+
+.header h1 {
+    font-size: 20px;
+    padding-top: 12px;
+    padding-left: 10px;
+}
+
+.date-filter {
+    display: flex;
+    gap: 10px;
+}
+
+.date-filter input {
+    padding: 5px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.date-filter button {
+    padding: 5px 10px;
+    border: none;
+    background-color: #4caf50;
+    color: white;
+    border-radius: 5px;
+}
+
+.actions {
+    display: flex;
+    gap: 10px;
+}
+
+.actions input {
+    padding: 5px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.actions button {
+    padding: 5px 10px;
+    border: none;
+    background-color: #4caf50;
+    color: white;
+    border-radius: 5px;
+}
+
+.metrics {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.metric-box {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: left;
+}
+
+.metric-box .title {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 10px;
+}
+
+.metric-box .value {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.chart-section {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.chart-section h2 {
+    margin-bottom: 20px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.chart {
+    text-align: center;
+}

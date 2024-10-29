@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crescimento</title>
+    <link rel="stylesheet" href="assets/main.css">
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    <!-- Inclui a biblioteca ApexCharts via CDN -->
+
+    <style>
+        #map {
+            height: 400px; /* Altura do mapa */
+        }
+    </style>
+</head>
+<body>
+    <div class="sidebar">
+        
+        <div class="menu">
+            <ul>
+                <li><i class="icon"><a href="/index.html" target="_blank"><img src="/assets/images/logo.png" width="50px" alt="Logo"></a></i></li>
+                <li><i class="icon"><a href="/index.html" target="_blank"><img src="/assets/images/home.png" width="50px" alt="Home"></a></i></li>
+                <li><i class="icon"><a href="/sementeira.html" target="_blank"><img src="/assets/images/seed.png" width="50px" alt="Seed"></a></i></li>
+                <li><i class="icon"><a href="/crescimento.html" target="_blank"><img src="assets/images/growth.png" width="50px" alt="Growth"></a></i></li>
+                <li><i class="icon"><a href="/analise.html" target="_blank"><img src="assets/images/money.png" width="50px" alt="Money"></a></i></li>
+                <li><i class="icon"><a href="https://link-settings.com" target="_blank"><img src="assets/images/settings.png" width="40px" alt="Settings"></a></i></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="main-content">
+
+        <header class="header">
+            <div class="profile">
+                <img src="/assets/images/Sambo.jpg" alt="profile picture">
+                <h1>Hello, Roberto!</h1>
+            </div>
+            <div class="date-filter">
+                <input type="text" value="From Jan 1, 2023 to Dec 31, 2024" />
+                <button>Repolho</button>
+            </div>
+            <div class="actions">
+                <input type="text" placeholder="Search..." />
+                <button>Filter</button>
+                <button>Download</button>
+            </div>
+        </header>
+
+        <section class="metrics">
+            <div class="metric-box">
+                <p class="title">Agua Aplicada</p>
+                <div class="chart">
+                    <div id="chart-agua-aplicada"></div>
+                </div>
+            </div>
+            <div class="metric-box">
+                <p class="title">Detalhamento dos insumos</p>
+                <div class="chart">
+                    <div id="chart-insumos"></div>
+                </div>
+            </div>
+           
+            <div class="metric-box">
+                <p class="title">Taxa de germinação</p>
+                <div class="chart">
+                    <div id="germinationChart"></div>
+                </div>
+            </div>
+            <div class="metric-box">
+                <p class="title">Ciclo de cultura  (dias)</p>
+                <p class="value">25</p>
+            </div>
+        </section>
+
+        <section class="chart-section">
+            <h2>Incidência de doenças</h2>
+            <div class="chart">
+                <div id="map"></div>
+            </div>
+        </section>
+    </div>
+<script src="script.js"></script>
+</body>
+</html>
