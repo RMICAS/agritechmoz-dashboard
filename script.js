@@ -351,6 +351,28 @@ var options = {
 var revenueChart = new ApexCharts(document.querySelector("#revenuechart"), options);
 revenueChart.render();
 
+// Metrics
+
+// Example dynamic content injection
+const container = document.getElementById('metrics-container');
+
+const dynamicMetrics = [
+    { title: 'Área de plantação', value: '500 m²' },
+    { title: 'Número de sementes plantadas', value: '12,000' },
+    { title: 'Incidência de doenças', value: '90%' },
+    { title: 'Consumo de Água por Metro Quadrado', value: '5 m³' },
+];
+
+dynamicMetrics.forEach(metric => {
+    const metricBox = `
+        <div class="metric-box">
+            <p class="title">${metric.title}</p>
+            <p class="value">${metric.value}</p>
+        </div>
+    `;
+    container.innerHTML += metricBox;
+});
+
 
 
 

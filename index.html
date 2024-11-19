@@ -41,7 +41,7 @@
             </div>
         </header>
 
-        <section class="metrics">
+        <section class="metrics" id="metrics-container">
             <div class="metric-box">
                 <img src="assets/images/area.png" alt="area" width="50px">
                 <p class="title">Área de plantação</p>
@@ -72,5 +72,41 @@
     </div>
 
     <script src="script.js"></script>
+
+    <script>
+        async function fetchData() {
+            try {
+                // Fetch data from the backend
+                const response = await fetch('http://127.0.0.1:5000/data');
+                const data = await response.json();
+    
+                // Update the frontend
+                const metricsContainer = document.querySelector('.metrics');
+                metricsContainer.innerHTML = ''; // Clear any existing content
+    
+                data.forEach(item => {
+                    const metricBox = document.createElement('div');
+                    metricBox.classList.add('metric-box');
+                    
+                    // Populate metric box
+                    metricBox.innerHTML = `
+                        <img src="assets/images/${item.image}" alt="${item.title}" width="50px">
+                        <p class="title">${item.title}</p>
+                        <p class="value">${item.value}</p>
+                    `;
+    
+                    // Append to metrics container
+                    metricsContainer.appendChild(metricBox);
+                });
+            } catch (error) {
+                console.error('Error fetching data:', error);
+            }
+        }
+    
+        // Call the fetchData function when the page loads
+        window.onload = fetchData;
+    </script>
+    
+
 </body>
 </html>
